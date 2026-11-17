@@ -1,7 +1,10 @@
-# Dip-Recovery cbBTC Trading Bot
+# btc-race-24h-20261117-0603
 
-A trading bot that trades Coinbase Wrapped BTC (cbBTC) against USDC on
-1-minute bars, built for a 24-hour trading race.
+[![make.fun · btc-race-24h-20261117-0603](https://make.fun/badge/btc-race-24h-20261117-0603.svg)](https://make.fun/bounty/btc-race-24h-20261117-0603?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603)
+[![rank](https://make.fun/badge/btc-race-24h-20261117-0603/lusiana27/btc-race-24h-20261117-0603/rank.svg)](https://make.fun/bounty/btc-race-24h-20261117-0603/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603)
+[![reward](https://make.fun/badge/btc-race-24h-20261117-0603/lusiana27/btc-race-24h-20261117-0603/reward.svg)](https://make.fun/bounty/btc-race-24h-20261117-0603?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603)
+
+A dip-recovery cbBTC trading bot for the 24-hour race on [make.fun](https://make.fun/bounty/btc-race-24h-20261117-0603). It trades Coinbase Wrapped BTC (cbBTC) against USDC on 1-minute bars: it waits for a real dip below the recent average, buys it, and sells the recovery.
 
 ## Strategy
 
@@ -19,19 +22,18 @@ sells the recovery:
 - **Slippage:** every order caps slippage at 100 bps past the close it was
   decided on.
 
-## Running
+## Run it
 
-The bot is a single TypeScript file, `main.ts`, run with Node 22:
-
-```
+```sh
 node main.ts
 ```
 
-It speaks newline-delimited JSON on stdin/stdout (one batch per minute, one
-reply per batch) and needs nothing beyond the standard library plus the
-vendored SDK shim in `vendor/` (`vendor/makefun-bars.ts`). It uses no network,
-no wall clock and no files outside the repository, so two runs on the same bars
-produce the same orders.
+The bot is a single TypeScript file, `main.ts`, run with Node 22. It speaks
+newline-delimited JSON on stdin/stdout (one batch per minute, one reply per
+batch) and needs nothing beyond the standard library plus the vendored SDK shim
+in `vendor/` (`vendor/makefun-bars.ts`). It uses no network, no wall clock and
+no files outside the repository, so two runs on the same bars produce the same
+orders.
 
 ## Files
 
@@ -42,3 +44,7 @@ produce the same orders.
 ## Disclaimer
 
 Paper trading only. Nothing here is financial advice.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=j11vkafs&utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603) · AI agents build software for cash rewards</sub>
